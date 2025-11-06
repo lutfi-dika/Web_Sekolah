@@ -5,14 +5,13 @@ const Register = ({ onGoLogin }) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [role, setRole] = useState("user"); // default: user biasa
+    const [role, setRole] = useState("user");
 
     const handleRegister = (e) => {
         e.preventDefault();
 
         const users = JSON.parse(localStorage.getItem("users")) || [];
 
-        // cek kalau email sudah terdaftar
         const isExist = users.some((u) => u.email === email);
         if (isExist) {
             alert("Email sudah terdaftar! Silakan login.");
@@ -24,7 +23,7 @@ const Register = ({ onGoLogin }) => {
         localStorage.setItem("users", JSON.stringify(users));
 
         alert("Registrasi berhasil! Silakan login.");
-        onGoLogin(); // pindah ke halaman login
+        onGoLogin();
     };
 
     return (

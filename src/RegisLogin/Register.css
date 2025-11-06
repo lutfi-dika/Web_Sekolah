@@ -1,84 +1,109 @@
-/* Container Form */
+/* ================================
+   🌐 REGISTER PAGE STYLING
+   ================================ */
 
+/* --- Background Layout --- */
 body {
   background: linear-gradient(135deg, #74b9ff, #0984e3);
-}
-/* Container halaman Registrasi */
-.register-container {
-  display: flex; /* Aktifkan Flexbox */
-  justify-content: center; /* Tengah horizontal */
-  align-items: flex-end; /* Posisi di bawah */
-  min-height: 100vh; /* Tinggi penuh layar */
-  padding-bottom: 220px; /* Jarak dari bawah layar */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
 }
 
-/* Box Form */
-.register-form {
-  background-color: white;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+/* --- Container Halaman Registrasi --- */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 400px;
+  padding: 20px;
+}
+
+/* ================================
+   📝 BOX FORM REGISTER
+   ================================ */
+.register-form {
+  background-color: #ffffff;
+  padding: 60px 70px; /* 🔥 lebih luas dari default */
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 900px; /* 🔥 card lebar */
   display: flex;
   flex-direction: column;
+  animation: fadeIn 0.8s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
-/* Judul Form */
+.register-form:hover {
+  transform: translateY(-5px);
+}
+
+/* --- Judul Form --- */
 .register-form h2 {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   color: #0984e3;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
 }
 
-/* Label */
+/* ================================
+   🧾 INPUT FIELD & LABEL
+   ================================ */
 .register-form label {
-  margin-top: 15px;
-  margin-bottom: 5px;
-  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-weight: 600;
   color: #2d3436;
+  font-size: 16px;
 }
 
-/* Input Field */
 .register-form input {
-  padding: 12px;
-  border-radius: 8px;
+  padding: 14px 16px;
+  border-radius: 10px;
   border: 1px solid #dfe6e9;
   outline: none;
-  font-size: 14px;
+  font-size: 15px;
   transition: all 0.3s ease;
 }
 
 .register-form input:focus {
   border-color: #0984e3;
-  box-shadow: 0 0 5px rgba(9, 132, 227, 0.5);
+  box-shadow: 0 0 6px rgba(9, 132, 227, 0.5);
 }
 
-/* Tombol Submit */
+/* ================================
+   🚀 TOMBOL REGISTER
+   ================================ */
 .register-form button {
-  margin-top: 25px;
-  padding: 12px;
+  margin-top: 35px;
+  padding: 14px;
   background-color: #0984e3;
-  color: white;
+  color: #ffffff;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 10px;
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .register-form button:hover {
   background-color: #74b9ff;
+  transform: scale(1.03);
 }
 
-/* Link Login */
+/* ================================
+   🔗 LINK LOGIN
+   ================================ */
 .register-form .login-link {
-  margin-top: 15px;
+  margin-top: 25px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #636e72;
 }
 
@@ -86,8 +111,41 @@ body {
   color: #0984e3;
   cursor: pointer;
   text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
 .register-form .login-link span:hover {
   color: #74b9ff;
+}
+
+/* ================================
+   ✨ ANIMASI FADE-IN
+   ================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   📱 RESPONSIVE (Mobile Friendly)
+   ================================ */
+@media (max-width: 768px) {
+  .register-form {
+    padding: 40px 25px;
+    max-width: 90%;
+  }
+
+  .register-form h2 {
+    font-size: 26px;
+  }
+
+  .register-form button {
+    font-size: 16px;
+  }
 }

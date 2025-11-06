@@ -1,82 +1,109 @@
-/* Container Login */
+/* ================================
+   🌐 LOGIN PAGE STYLING
+   ================================ */
+
+/* --- Background Layout --- */
 body {
   background: linear-gradient(135deg, #74b9ff, #0984e3);
-}
-.login-container {
-  display: flex; /* Aktifkan Flexbox */
-  justify-content: center; /* Tengah horizontal */
-  align-items: flex-end; /* Posisi di bawah */
-  min-height: 100vh; /* Tinggi penuh layar */
-  padding-bottom: 400px; /* Jarak dari bawah layar */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
 }
 
-/* Form Box */
-.login-form {
-  background-color: white;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+/* --- Container Utama --- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 400px;
+  padding: 20px;
+}
+
+/* ================================
+   🔒 LOGIN FORM BOX (Lebar)
+   ================================ */
+.login-form {
+  background-color: #ffffff;
+  padding: 60px 70px; /* 🔥 lebih luas */
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 800px; /* 🔥 card makin lebar */
   display: flex;
   flex-direction: column;
+  animation: fadeIn 0.8s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
-/* Judul Form */
+.login-form:hover {
+  transform: translateY(-5px);
+}
+
+/* --- Judul Form --- */
 .form-title {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   color: #0984e3;
-  font-size: 24px;
+  font-size: 32px; /* 🔥 lebih besar */
   font-weight: 700;
 }
 
-/* Label */
+/* ================================
+   🧾 INPUT FIELD & LABEL
+   ================================ */
 .login-form label {
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-top: 22px;
+  margin-bottom: 8px;
   font-weight: 500;
   color: #2d3436;
+  font-size: 17px;
 }
 
-/* Input Field */
 .login-form input {
-  padding: 12px;
-  border-radius: 8px;
+  padding: 16px 18px;
+  border-radius: 10px;
   border: 1px solid #dfe6e9;
   outline: none;
-  font-size: 14px;
+  font-size: 16px;
   transition: all 0.3s ease;
 }
 
 .login-form input:focus {
   border-color: #0984e3;
-  box-shadow: 0 0 5px rgba(9, 132, 227, 0.5);
+  box-shadow: 0 0 6px rgba(9, 132, 227, 0.5);
 }
 
-/* Tombol Submit */
+/* ================================
+   🚀 TOMBOL LOGIN
+   ================================ */
 .submit-button {
-  margin-top: 25px;
-  padding: 12px;
+  margin-top: 40px;
+  padding: 16px;
   background-color: #0984e3;
-  color: white;
+  color: #ffffff;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 10px;
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .submit-button:hover {
   background-color: #74b9ff;
+  transform: scale(1.03);
 }
 
-/* Link Registrasi */
+/* ================================
+   🔗 LINK REGISTRASI
+   ================================ */
 .register-link {
-  margin-top: 15px;
+  margin-top: 25px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #636e72;
 }
 
@@ -84,8 +111,41 @@ body {
   color: #0984e3;
   cursor: pointer;
   text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
 .register-link span:hover {
   color: #74b9ff;
+}
+
+/* ================================
+   ✨ ANIMASI FADE-IN
+   ================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   📱 RESPONSIVE (Mobile Friendly)
+   ================================ */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 40px 25px;
+    max-width: 90%;
+  }
+
+  .form-title {
+    font-size: 26px;
+  }
+
+  .submit-button {
+    font-size: 16px;
+  }
 }
