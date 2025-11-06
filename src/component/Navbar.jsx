@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 
 const Navbar = ({ setPage, onLogout, userRole }) => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
         <nav className="navbar">
             {/* 🔹 Logo */}
@@ -18,8 +20,18 @@ const Navbar = ({ setPage, onLogout, userRole }) => {
                 </a>
             </div>
 
+            {/* 🔹 Tombol Hamburger */}
+            <div
+                className={`hamburger ${menuOpen ? "active" : ""}`}
+                onClick={() => setMenuOpen(!menuOpen)}
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             {/* 🔹 Navigasi Utama */}
-            <ul className="navbar-links">
+            <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
                 <li>
                     <a
                         href="#beranda"
@@ -27,6 +39,7 @@ const Navbar = ({ setPage, onLogout, userRole }) => {
                         onClick={(e) => {
                             e.preventDefault();
                             setPage("home");
+                            setMenuOpen(false);
                         }}
                     >
                         Beranda
@@ -54,13 +67,14 @@ const Navbar = ({ setPage, onLogout, userRole }) => {
                         onClick={(e) => {
                             e.preventDefault();
                             setPage("contact");
+                            setMenuOpen(false);
                         }}
                     >
                         Kontak
                     </a>
                 </li>
 
-                {/* 🔹 Dashboard muncul sesuai role */}
+                {/* 🔹 Dashboard sesuai role */}
                 {userRole === "admin" && (
                     <li>
                         <a
@@ -69,6 +83,7 @@ const Navbar = ({ setPage, onLogout, userRole }) => {
                             onClick={(e) => {
                                 e.preventDefault();
                                 setPage("admin");
+                                setMenuOpen(false);
                             }}
                         >
                             Dashboard Admin
@@ -84,15 +99,37 @@ const Navbar = ({ setPage, onLogout, userRole }) => {
                             onClick={(e) => {
                                 e.preventDefault();
                                 setPage("user");
+                                setMenuOpen(false);
                             }}
                         >
                             Dashboard User
                         </a>
                     </li>
                 )}
+
+                {/* 🔹 Tombol Aksi di versi mobile */}
+                <li className="mobile-actions">
+                    {!userRole ? (
+                        <>
+                            <button className="login-button" onClick={() => setPage("login")}>
+                                Login
+                            </button>
+                            <button
+                                className="cta-button"
+                                onClick={() => setPage("register")}
+                            >
+                                Mulai Sekarang
+                            </button>
+                        </>
+                    ) : (
+                        <button className="cta-button logout" onClick={onLogout}>
+                            Logout
+                        </button>
+                    )}
+                </li>
             </ul>
 
-            {/* 🔹 Tombol Aksi */}
+            {/* 🔹 Tombol Aksi (desktop) */}
             <div className="navbar-actions">
                 {!userRole ? (
                     <>
