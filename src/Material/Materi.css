@@ -1,0 +1,139 @@
+/* Parent unik untuk halaman Materi */
+.jarak {
+  margin-bottom: 4%;
+}
+
+/* --- Halaman Materi --- */
+.materi-page {
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-color: #0984e3;
+  min-height: 100vh;
+}
+
+.materi-page h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #222;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* --- List Card --- */
+.materi-page .materi-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* --- Card Individual --- */
+.materi-page .materi-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: left;
+  min-height: 200px;
+  font-size: 2rem;
+}
+
+.materi-page .materi-card h4 {
+  margin-bottom: 15px;
+  font-size: 3rem;
+  color: #333;
+}
+
+.materi-page .materi-card h4:hover {
+  color: #0984e3;
+}
+
+.materi-page .materi-card p {
+  font-size: 2rem;
+  color: #555;
+}
+
+.materi-page .materi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Modal Overlay --- */
+.materi-page .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* --- Modal Content --- */
+.materi-page .modal-content {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  text-align: left;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.materi-page .modal-content h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.materi-page .modal-content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* --- Tombol Tutup Modal --- */
+.materi-page .modal-content button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.materi-page .modal-content button:hover {
+  background-color: #0056b3;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .materi-page .materi-card {
+    padding: 25px;
+  }
+
+  .materi-page .materi-card h4 {
+    font-size: 18px;
+  }
+
+  .materi-page .materi-card p {
+    font-size: 14px;
+  }
+
+  .materi-page .modal-content {
+    padding: 30px;
+  }
+
+  .materi-page .modal-content h3 {
+    font-size: 20px;
+  }
+}

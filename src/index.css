@@ -1,0 +1,26 @@
+/* src/main.css atau src/index.css */
+
+/* 1. CSS Reset Universal */
+/* Menggunakan *{} untuk menghilangkan margin dan padding bawaan browser pada semua elemen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Memastikan padding dan border tidak menambah ukuran total elemen */
+}
+
+/* 2. Gaya Dasar Body dan HTML */
+/* Menetapkan tinggi penuh dan font dasar untuk seluruh aplikasi */
+html,
+body {
+  min-height: 100vh; /* Memastikan tinggi minimum adalah 100% dari viewport */
+  scroll-behavior: smooth; /* Opsional: Membuat scrolling lebih halus */
+  font-family: Arial, sans-serif;
+  color: #333; /* Warna teks default */
+  background-color:black; /* Warna latar belakang default yang sedikit abu-abu */
+}
+
+/* 3. Gaya Dasar Tautan (Hyperlink) */
+a {
+  color: inherit; /* Tautan mewarisi warna teks parent */
+  text-decoration: none; /* Opsional: Menghilangkan garis bawah default */
+}

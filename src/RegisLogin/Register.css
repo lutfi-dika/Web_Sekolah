@@ -1,0 +1,93 @@
+/* Container Form */
+
+body {
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+}
+/* Container halaman Registrasi */
+.register-container {
+  display: flex; /* Aktifkan Flexbox */
+  justify-content: center; /* Tengah horizontal */
+  align-items: flex-end; /* Posisi di bawah */
+  min-height: 100vh; /* Tinggi penuh layar */
+  padding-bottom: 220px; /* Jarak dari bawah layar */
+}
+
+/* Box Form */
+.register-form {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Judul Form */
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0984e3;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Label */
+.register-form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #2d3436;
+}
+
+/* Input Field */
+.register-form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #dfe6e9;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.register-form input:focus {
+  border-color: #0984e3;
+  box-shadow: 0 0 5px rgba(9, 132, 227, 0.5);
+}
+
+/* Tombol Submit */
+.register-form button {
+  margin-top: 25px;
+  padding: 12px;
+  background-color: #0984e3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #74b9ff;
+}
+
+/* Link Login */
+.register-form .login-link {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #636e72;
+}
+
+.register-form .login-link span {
+  color: #0984e3;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.register-form .login-link span:hover {
+  color: #74b9ff;
+}

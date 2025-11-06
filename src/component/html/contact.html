@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Kontak Kami - SMK Telesandi</title>
+  </head>
+
+  <body class="bg-gradient-to-br from-slate-900 to-slate-700 text-white">
+    <!-- Section Contact -->
+    <section
+      id="kontak"
+      class="min-h-screen flex items-center justify-center px-6 py-16"
+    >
+      <div
+        class="bg-white/10 backdrop-blur-lg rounded-2xl shadow-xl w-full max-w-2xl p-8"
+      >
+        <h2 class="text-3xl font-bold text-center mb-2">Hubungi Kami</h2>
+        <p class="text-center text-slate-300 mb-8">
+          Kami siap membantu menjawab pertanyaan atau permintaan informasi Anda.
+        </p>
+
+        <form class="space-y-6">
+          <!-- Nama -->
+          <div>
+            <label for="name" class="block mb-2 font-medium"
+              >Nama Lengkap</label
+            >
+            <input
+              id="name"
+              type="text"
+              placeholder="Masukkan nama lengkap anda"
+              class="w-full p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:ring-2 focus:ring-sky-400 focus:outline-none"
+              required
+            />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block mb-2 font-medium">Email</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Masukkan email aktif"
+              class="w-full p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:ring-2 focus:ring-sky-400 focus:outline-none"
+              required
+            />
+          </div>
+
+          <!-- Pesan -->
+          <div>
+            <label for="message" class="block mb-2 font-medium">Pesan</label>
+            <textarea
+              id="message"
+              rows="4"
+              placeholder="Tulis pesan anda di sini..."
+              class="w-full p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:ring-2 focus:ring-sky-400 focus:outline-none"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Tombol -->
+          <div class="text-center">
+            <button
+              type="submit"
+              class="bg-sky-500 hover:bg-sky-600 transition transform hover:scale-105 px-8 py-3 rounded-xl font-semibold shadow-lg"
+            >
+              Kirim Pesan
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

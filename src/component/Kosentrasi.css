@@ -1,0 +1,137 @@
+/* --- Section Styling --- */
+.konsentrasi-section {
+  padding: 100px 24px;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1400px; /* lebih lebar */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* --- Title Styling --- */
+.section-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1e40af;
+  margin-bottom: 16px;
+}
+
+.title-underline {
+  height: 4px;
+  width: 220px;
+  background-color: #3b82f6;
+  margin: 0 auto 70px auto;
+  border-radius: 2px;
+}
+
+/* --- Grid dan Card Styling --- */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+  }
+}
+
+/* --- Kartu Keahlian --- */
+.keahlian-card {
+  background-color: #eff6ff;
+  padding: 40px; /* lebih besar */
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+  overflow: hidden;
+}
+
+.keahlian-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Icon Wrapper 3D --- */
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  margin-bottom: 28px;
+  background: linear-gradient(145deg, #ffffff, #e3ebff);
+  border-radius: 20px;
+  box-shadow: 6px 6px 15px #d6d6d6, -6px -6px 15px #ffffff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Efek hover di dalam card */
+.keahlian-card:hover .icon-wrapper {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 10px 10px 20px #cfcfcf, -10px -10px 20px #ffffff;
+}
+
+/* Efek animasi tambahan untuk ikon */
+.card-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.keahlian-card:hover .card-icon {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.1);
+}
+
+/* --- Card Title --- */
+.card-title {
+  background-color: #1d4ed8;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 12px 12px 0 0;
+  margin-left: -40px;
+  margin-right: -40px;
+}
+
+/* --- Card Content --- */
+.card-content {
+  text-align: left;
+  margin-top: 28px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.content-subtitle {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+.content-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: #4b5563;
+  font-size: 15px;
+}
+
+.content-list li {
+  margin-bottom: 10px;
+}
+
+.content-list li:last-child {
+  margin-bottom: 0;
+}

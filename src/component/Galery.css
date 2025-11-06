@@ -1,0 +1,152 @@
+/* src/Gallery.css - Gaya Slideshow Horizontal & Lebih Besar */
+
+/* ======================================= */
+/* ====== STRUKTUR GALERI UTAMA ====== */
+/* ======================================= */
+.gallery-section {
+  padding: 80px 0;
+  background-color: #f4f6f8;
+  width: 100%;
+}
+
+.gallery-container {
+  max-width: 2000px; /* Diperbesar untuk tampilan yang lebih lebar */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.gallery-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color:#3b82f6;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.gallery-underline {
+  height: 4px;
+  width: 80px;
+  background-color: #3498db;
+  margin: 0 auto 50px auto;
+  border-radius: 2px;
+}
+
+/* ======================================= */
+/* ====== SLIDESHOW (GESER) ====== */
+/* ======================================= */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 700px; /* Ketinggian diperbesar menjadi 700px */
+  overflow: hidden; /* WAJIB: Menyembunyikan slide yang tidak aktif */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Container yang MENAMPUNG SEMUA SLIDE */
+.slideshow-wrapper {
+  display: flex; /* WAJIB: Membuat semua item berada dalam satu baris */
+  height: 100%;
+  width: 100%;
+  /* WAJIB: Transisi untuk animasi geser yang mulus */
+  transition: transform 0.7s ease-in-out;
+}
+
+/* Item Slide Tunggal */
+.slideshow-item {
+  min-width: 100%; /* WAJIB: Setiap slide harus mengambil 100% lebar wrapper */
+  height: 100%;
+  flex-shrink: 0; /* WAJIB: Mencegah item menyusut */
+  position: relative;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Caption dan Indikator --- */
+.slideshow-caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  z-index: 10;
+}
+
+.caption-text {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem; /* Diperbesar sedikit */
+  font-weight: 600;
+}
+
+/* --- Tombol Slide (Prev/Next) --- */
+.slide-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 20px; /* Diperbesar */
+  color: white;
+  font-weight: bolder;
+  font-size: 28px; /* Diperbesar */
+  transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  z-index: 10;
+  border-radius: 4px;
+}
+
+.slide-btn.next {
+  right: 10px;
+}
+
+.slide-btn.prev {
+  left: 10px;
+}
+
+.slide-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* --- Indikator Titik (Dots) --- */
+.dot-indicators {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 14px; /* Diperbesar */
+  width: 14px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.dot.active {
+  background-color: #3498db;
+  transform: scale(1.1);
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+  .slideshow-container {
+    height: 400px; /* Diperbesar sedikit di mobile untuk proporsi 1400/700 */
+  }
+  .slide-btn {
+    padding: 12px;
+    font-size: 20px;
+  }
+  .caption-text {
+    font-size: 1rem;
+  }
+}

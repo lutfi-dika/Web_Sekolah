@@ -1,0 +1,149 @@
+.jarak-nav {
+  margin-bottom: 7%; /* Sesuaikan dengan tinggi navbar Anda */
+}
+
+.admin-dashboard {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0984e3;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.logout-btn {
+  background: #d63031;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #ff7675;
+}
+
+/* Statistik */
+.admin-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  flex: 1 1 200px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  color: #636e72;
+  font-size: 16px;
+}
+
+.stat-card p {
+  font-size: 32px;
+  color: #0984e3;
+  font-weight: 700;
+  margin: 10px 0 0;
+}
+
+/* Tabel */
+.admin-table {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table h2 {
+  margin-bottom: 20px;
+  color: #2d3436;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.admin-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #dfe6e9;
+}
+
+.admin-table th {
+  background-color: #0984e3;
+  color: white;
+}
+
+.admin-table tr:hover {
+  background-color: #f1f2f6;
+}
+
+.admin-add-material {
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-add-material form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-add-material input,
+.admin-add-material textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.admin-add-material button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2b1055;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.admin-add-material button:hover {
+  background-color: #7597de;
+}
+
+

@@ -1,0 +1,48 @@
+/* src/App.css */
+
+/* PENTING: RESET GLOBAL MINIMAL UNTUK MENGHAPUS MARGIN & PADDING BAWAAN */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* Pastikan properti flex, max-width, dll. dihilangkan dari body */
+}
+
+/* Kontainer Aplikasi Utama (Centering Konten) */
+.app-container {
+  text-align: center;
+  padding: 20px;
+
+  max-width: 800px;
+  width: 100%;
+
+  /* Meratakan kontainer ke tengah horizontal, dengan jarak 50px dari Navbar */
+  margin: 50px auto 20px auto;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.data-message {
+  color: #3498db;
+  font-weight: bold;
+}
+
+p {
+  color: #34495e;
+  line-height: 1.6;
+}
+
+
+/* ====== nav ======= */
+
+.nav{
+  margin-bottom: 2%;
+}
