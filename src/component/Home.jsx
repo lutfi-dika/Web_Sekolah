@@ -25,7 +25,7 @@ const Home = () => {
                         <div className="image-column">
                             <img
                                 className="content-image"
-                                src="/src/component/naufal.jpg"
+                                src="https://smktelekomunikasitelesandi.sch.id/public/storage/news/f8gVGjovSlNO0ikc23k85gvaNSflemZJzl8fmGb7.jpg"
                                 alt="Kegiatan Siswa"
                             />
                         </div>
